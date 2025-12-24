@@ -24,20 +24,20 @@ crons = ["0 0 * * *"]
 
 [[routes]]
 # Refer to https://developers.cloudflare.com/workers/wrangler/configuration/#routes
-pattern = "shz.al"
+pattern = "hughr.de"
 custom_domain = true
 
 [[kv_namespaces]]
-binding = "PB"  # do not touch this
-id = "435f8959b9de485ea48751ba557d90f5"  # id of your KV namespace
+binding = "pastebin"  # do not touch this
+id = "2d36b8f34fba4c1a875442340e49e1db"  # id of your KV namespace
 
 [[r2_buckets]]
 binding = "R2"  # do not touch this
-bucket_name = "pb-shz-al"  # bucket name of your R2 bucket
+bucket_name = "pastebin"  # bucket name of your R2 bucket
 
 [vars]
 # must be consistent with your routes
-DEPLOY_URL = "https://shz.al"
+DEPLOY_URL = "https://pb.hughr.de"
 
 # url to repo, displayed in the index page
 REPO = "https://github.com/SharzyL/pastebin-worker"
@@ -46,10 +46,10 @@ REPO = "https://github.com/SharzyL/pastebin-worker"
 INDEX_PAGE_TITLE = "Pastebin Worker"
 
 # the name displayed in TOS
-TOS_MAINTAINER = "Sharzy"
+TOS_MAINTAINER = "Hugh "
 
 # the email displayed in TOS
-TOS_MAIL = "pb@shz.al"
+TOS_MAIL = "Hugh@hugh.fun"
 
 # Cache-Control max-age for static pages
 CACHE_STATIC_PAGE_AGE = 7200
@@ -58,10 +58,10 @@ CACHE_STATIC_PAGE_AGE = 7200
 CACHE_PASTE_AGE = 600
 
 # Default expiration
-DEFAULT_EXPIRATION = "7d"
+DEFAULT_EXPIRATION = "1d"
 
 # Max expiration
-MAX_EXPIRATION = "30d"
+MAX_EXPIRATION = "7d"
 
 # A collection of {username: password} pair
 # Leave empty to disable auth
